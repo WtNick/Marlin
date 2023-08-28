@@ -863,7 +863,7 @@
 #endif
 
 #if HAS_Y2_STEPPER
-  //#define INVERT_Y2_VS_Y_DIR        // Y2 direction signal is the opposite of Y
+  #define INVERT_Y2_VS_Y_DIR        // Y2 direction signal is the opposite of Y
   //#define Y_DUAL_ENDSTOPS           // Y2 has its own endstop
   #if ENABLED(Y_DUAL_ENDSTOPS)
     //#define Y2_STOP_PIN Y_MAX_PIN   // Y2 endstop pin override
@@ -1191,7 +1191,7 @@
 
 // @section motion
 
-#define AXIS_RELATIVE_MODES { false, false, false, false }
+#define AXIS_RELATIVE_MODES { false, false, false}
 
 // Add a Duplicate option for well-separated conjoined nozzles
 //#define MULTI_NOZZLE_DUPLICATION
@@ -1762,7 +1762,7 @@
   // LCD's font must contain the characters. Check your selected LCD language.
   //#define UTF_FILENAME_SUPPORT
 
-  //#define LONG_FILENAME_HOST_SUPPORT    // Get the long filename of a file/folder with 'M33 <dosname>' and list long filenames with 'M20 L'
+  #define LONG_FILENAME_HOST_SUPPORT    // Get the long filename of a file/folder with 'M33 <dosname>' and list long filenames with 'M20 L'
   //#define LONG_FILENAME_WRITE_SUPPORT   // Create / delete files with long filenames via M28, M30, and Binary Transfer Protocol
   //#define M20_TIMESTAMP_SUPPORT         // Include timestamps by adding the 'T' flag to M20 commands
 
@@ -2614,7 +2614,7 @@
 //#define NO_TIMEOUTS 1000 // Milliseconds
 
 // Some clients will have this feature soon. This could make the NO_TIMEOUTS unnecessary.
-//#define ADVANCED_OK
+#define ADVANCED_OK
 
 // Printrun may have trouble receiving long strings all at once.
 // This option inserts short delays between lines of serial output.
@@ -3351,7 +3351,7 @@
    * Enable M122 debugging command for TMC stepper drivers.
    * M122 S0/1 will enable continuous reporting.
    */
-  //#define TMC_DEBUG
+  #define TMC_DEBUG
 
   /**
    * You can set your own advanced settings by filling in predefined functions.
@@ -3814,7 +3814,7 @@
 
 // Extra options for the M114 "Current Position" report
 //#define M114_DETAIL         // Use 'M114` for details to check planner calculations
-//#define M114_REALTIME       // Real current position based on forward kinematics
+#define M114_REALTIME       // Real current position based on forward kinematics
 //#define M114_LEGACY         // M114 used to synchronize on every call. Enable if needed.
 
 //#define REPORT_FAN_CHANGE   // Report the new fan speed when changed by M106 (and others)

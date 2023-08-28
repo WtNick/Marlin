@@ -50,7 +50,8 @@
 #define X_DIAG_PIN                          PG6   // X-STOP
 #define Y_DIAG_PIN                          PG9   // Y-STOP
 #define Z_DIAG_PIN                          PG10  // Z-STOP
-#define Z2_DIAG_PIN                         PG11  // Z2-STOP
+//#define Z2_DIAG_PIN                         PG11  // Z2-STOP
+#define Y2_DIAG_PIN                         PG11  // Y2-STOP
 #define E0_DIAG_PIN                         PG12  // E0DET
 #define E1_DIAG_PIN                         PG13  // E1DET
 #define E2_DIAG_PIN                         PG14  // E2DET
@@ -200,11 +201,17 @@
   #define E2_CS_PIN                         PE1
 #endif
 
-#define E3_STEP_PIN                         PE6   // MOTOR 7
-#define E3_DIR_PIN                          PA14
-#define E3_ENABLE_PIN                       PE0
-#ifndef E3_CS_PIN
-  #define E3_CS_PIN                         PD3
+// #define E3_STEP_PIN                         PE6   // MOTOR 7
+// #define E3_DIR_PIN                          PA14
+// #define E3_ENABLE_PIN                       PE0
+// #ifndef E3_CS_PIN
+//   #define E3_CS_PIN                         PD3
+// #endif
+#define Y2_STEP_PIN                         PE6   // MOTOR 7
+#define Y2_DIR_PIN                          PA14
+#define Y2_ENABLE_PIN                       PE0
+#ifndef Y2_CS_PIN
+  #define Y2_CS_PIN                         PD3
 #endif
 
 //
